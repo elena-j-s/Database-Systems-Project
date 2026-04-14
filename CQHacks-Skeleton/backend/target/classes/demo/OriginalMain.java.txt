@@ -1,0 +1,19 @@
+// Original team Main.java (package Project) — paths adjusted in Spring via DataPathsProperties.
+
+package Project;
+
+import java.util.ArrayList;
+
+public class Main {
+
+    static void main() {
+        LapTimesReader LTReader = new LapTimesReader(".../LapTimes.csv");
+        ArrayList<Race> races = LTReader.readCSV();
+        System.out.println(races.get(0).toString());
+        InsightGenerator ingen = new InsightGenerator(races.get(0));
+        ingen.generateAll();
+        for (String a : ingen.insights) {
+            System.out.println(a);
+        }
+    }
+}

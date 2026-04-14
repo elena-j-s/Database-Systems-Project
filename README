@@ -1,1 +1,15 @@
+# Season 2025 F1 Viewer
+
+# How to Run
+```
+npm install
+npm run dev
+```
+in /frontend
+
+```
+./mvnw spring-boot:run
+```
+
+in /backend
 

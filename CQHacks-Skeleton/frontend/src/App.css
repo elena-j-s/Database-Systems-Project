@@ -1,0 +1,162 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.back-link {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.35rem 0;
+  border: none;
+  background: none;
+  color: #9aa0a6;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.back-link:hover {
+  color: #e8eaed;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #f0f2f5;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: #9aa0a6;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9aa0a6;
+}
+
+.field select {
+  min-width: 12rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #151922;
+  color: #e8eaed;
+  font-size: 0.95rem;
+}
+
+.btn {
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e8eaed;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn.ghost:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.panel {
+  margin-top: 1.5rem;
+}
+
+.panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #c4c7cc;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.grid.compact {
+  font-size: 0.8rem;
+}
+
+.grid th,
+.grid td {
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.grid thead th {
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 600;
+  color: #b8bcc4;
+  white-space: nowrap;
+}
+
+.grid tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.team {
+  display: inline-block;
+  padding-left: 0.5rem;
+  border-left: 3px solid #888;
+}
+
+.muted {
+  color: #9aa0a6;
+}
+
+.muted.small {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.err {
+  color: #ff9a9a;
+}

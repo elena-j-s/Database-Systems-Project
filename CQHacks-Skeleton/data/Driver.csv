@@ -1,0 +1,21 @@
+driver_id,team_id,first_name,last_name,country,dob,driver_number
+1,1,Pierre,Gasly,France,1996-02-07,10
+2,1,Franco,Colapinto,Argintina,2003-05-27,43
+3,2,Fernando,Alonso,Spain,1981-04-29,14
+4,2,Lance,Stroll,Canada,1998-10-29,18
+5,3,Charles,Leclerc,Monaco,1997-10-16,16
+6,3,Lewis,Hamilton,United Kingdom,1985-01-07,44
+7,4,Esteban,Ocon,France,1996-09-17,31
+8,4,Oliver,Bearman,United Kingdom,2005-05-08,87
+9,5,Gabriel,Bortoleto,Brasil,2004-10-14,5
+10,5,Nico,Hülkenberg,Germany,1987-08-19,27
+11,6,Lando,Norris,United Kingdom,1999-10-13,4
+12,6,Oscar,Piastri,Australia,2001-04-06,81
+13,7,Kimi,Antonelli,Italy,2006-08-25,12
+14,7,George,Russell,United Kingdom,1998-02-15,63
+15,8,Isack,Hadjar,France,2004-09-28,6
+16,8,Liam,Lawson,New Zealand,2002-02-11,30
+17,9,Max,Verstappen,Netharlands,1997-09-30,1
+18,9,Yuki,Tsunoda,Japan,2000-05-11,22
+19,10,Alexander,Albon,Tailand,1996-03-23,23
+20,10,Carlos,Sainz,Spain,1994-09-01,55

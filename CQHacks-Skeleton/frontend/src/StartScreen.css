@@ -1,0 +1,275 @@
+.start-screen {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #0a0a0c;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.start-screen--exiting {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Full-bleed slideshow (public/asset/images/) — sits behind the whole layout */
+.start-screen-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.start-screen-media-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+      118deg,
+      rgba(32, 48, 88, 0.38) 0%,
+      rgba(12, 18, 40, 0.22) 38%,
+      rgba(8, 10, 28, 0.12) 58%,
+      rgba(48, 20, 56, 0.32) 100%
+    ),
+    radial-gradient(ellipse 80% 70% at 70% 40%, rgba(255, 180, 100, 0.12) 0%, transparent 55%);
+  backdrop-filter: blur(3px) saturate(1.45) brightness(1.04);
+  -webkit-backdrop-filter: blur(3px) saturate(1.45) brightness(1.04);
+}
+
+.start-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 40%) 1fr;
+  min-height: 100vh;
+  height: 100%;
+  align-items: stretch;
+  isolation: isolate;
+}
+
+@media (max-width: 720px) {
+  .start-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(200px, 28vh);
+  }
+}
+
+/* Liquid-glass sidebar: saturated blur + specular tint */
+.start-menu-panel {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1.25rem 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  overflow: hidden;
+  border-radius: 0 22px 22px 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    4px 0 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 0 60px rgba(120, 200, 255, 0.06);
+  background: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.04) 45%,
+    rgba(180, 210, 255, 0.08) 100%
+  );
+  backdrop-filter: blur(28px) saturate(1.85) brightness(1.06);
+  -webkit-backdrop-filter: blur(28px) saturate(1.85) brightness(1.06);
+}
+
+.start-menu-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.38) 0%,
+    rgba(255, 255, 255, 0.06) 28%,
+    transparent 46%,
+    rgba(100, 200, 255, 0.12) 72%,
+    rgba(255, 200, 120, 0.1) 100%
+  );
+  opacity: 0.55;
+  mix-blend-mode: overlay;
+}
+
+.start-menu-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.start-brand {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(2.35rem, 9vw, 4.75rem);
+  font-style: italic;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow:
+    0 0 36px rgba(236, 0, 4, 0.45),
+    0 3px 16px rgba(0, 0, 0, 0.55),
+    0 1px 0 rgba(255, 255, 255, 0.35);
+  line-height: 1.05;
+}
+
+.start-nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.mk-menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+}
+
+.mk-menu-btn__frame {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(145deg, rgba(42, 42, 42, 0.85) 0%, rgba(18, 18, 18, 0.9) 100%);
+  border: 3px solid rgba(245, 245, 245, 0.95);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transform: rotate(45deg);
+  border-radius: 4px;
+}
+
+.mk-menu-btn__frame .mk-icon-svg {
+  width: 34px;
+  height: 34px;
+  transform: rotate(-45deg);
+}
+
+.mk-menu-btn--selected .mk-menu-btn__frame {
+  border-color: #ff3b30;
+  box-shadow:
+    0 2px 0 rgba(0, 0, 0, 0.4),
+    0 0 18px rgba(236, 0, 4, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.mk-menu-btn__track {
+  position: relative;
+  flex: 1;
+  min-height: 3.1rem;
+  padding: 0.55rem 1rem 0.55rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: linear-gradient(
+    90deg,
+    rgba(40, 40, 48, 0.35) 0%,
+    rgba(24, 24, 32, 0.45) 100%
+  );
+  clip-path: polygon(0 8%, 3% 0, 100% 0, 100% 100%, 4% 100%, 0 88%);
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.mk-menu-btn--selected .mk-menu-btn__track {
+  background: linear-gradient(
+    90deg,
+    rgba(55, 18, 18, 0.58) 0%,
+    rgba(28, 10, 10, 0.72) 100%
+  );
+  box-shadow: inset 0 0 0 1px rgba(255, 82, 82, 0.55);
+  border-left-color: rgba(255, 82, 82, 0.45);
+}
+
+.mk-menu-btn__label {
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: #f5f7fa;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+.mk-menu-btn--selected .mk-menu-btn__label {
+  color: #ff8a80;
+  text-shadow:
+    0 0 12px rgba(236, 0, 4, 0.45),
+    0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+.mk-menu-btn__chevrons {
+  position: absolute;
+  right: 0.35rem;
+  top: 0;
+  bottom: 0;
+  width: 2.5rem;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 82, 82, 0.5),
+    rgba(255, 82, 82, 0.5) 6px,
+    rgba(198, 40, 40, 0.35) 6px,
+    rgba(198, 40, 40, 0.35) 12px
+  );
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%);
+  pointer-events: none;
+}
+
+/* Right column: lets the full-bleed media show through (decorative edge) */
+.start-art-column {
+  position: relative;
+  min-height: 100vh;
+  pointer-events: none;
+  clip-path: polygon(6% 0, 100% 0, 100% 100%, 0 100%);
+  margin-left: -6%;
+}
+
+@media (max-width: 720px) {
+  .start-art-column {
+    clip-path: none;
+    margin-left: 0;
+    min-height: 0;
+  }
+}
+
+.start-art-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.start-art-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
+
+.start-art-slide--visible {
+  opacity: 1;
+}

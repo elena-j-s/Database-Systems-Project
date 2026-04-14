@@ -1,0 +1,25 @@
+race_id,season_id,race_name,country,race_date,laps
+1,1,Australian Grand Prix,Australia,2025-03-16,58
+2,1,Chinese Grand Prix,China,2025-03-23,56
+3,1,Japanese Grand Prix,Japan,2025-04-06,53
+4,1,Bahrain Grand Prix,Bahrain,2025-04-13,57
+5,1,Saudi Arabian Grand Prix,Saudi Arabia,2025-04-20,50
+6,1,Miami Grand Prix,United States,2025-05-04,57
+7,1,Emilia Romagna Grand Prix,Italy,2025-05-18,63
+8,1,Monaco Grand Prix,Monaco,2025-05-25,78
+9,1,Spanish Grand Prix,Spain,2025-06-01,66
+10,1,Canadian Grand Prix,Canada,2025-06-15,70
+11,1,Austrian Grand Prix,Austria,2025-06-29,71
+12,1,British Grand Prix,United Kingdom,2025-07-06,52
+13,1,Belgian Grand Prix,Belgium,2025-07-27,44
+14,1,Hungarian Grand Prix,Hungry,2025-08-03,70
+15,1,Dutch Grand Prix,Netherlands,2025-08-31,72
+16,1,Italian Grand Prix,Italy,2025-09-07,53
+17,1,Azerbaijan Grand Prix,Azerbaijan,2025-09-21,51
+18,1,Singapore Grand Prix,Singapore,2025-10-05,62
+19,1,United States Grand Prix,United States,2025-10-19,56
+20,1,Mexico City Grand Prix,Mexico,2025-10-26,71
+21,1,São Paulo Grand Prix,Brasil,2025-11-09,71
+22,1,Las Vegas Grand Prix,United States,2025-11-22,50
+23,1,Qatar Grand Prix,Qatar,2025-11-30,57
+24,1,Abu Dhabi Grand Prix,United Arab Emirates,2025-12-07,58

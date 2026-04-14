@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: season-2025-f1-viewer-api
+
+app:
+  # Normalized tables: Driver.csv, Team.csv, Race.csv, Race Results.csv (relative to backend/)
+  data-dir: ${DATA_DIR:}
